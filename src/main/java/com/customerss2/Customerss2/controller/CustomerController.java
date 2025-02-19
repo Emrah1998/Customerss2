@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("v1/customers")
+@RequestMapping("v1/customerss2")
 public class CustomerController {
-    private final CustomerServiceHandle customerService;
+    private final CustomerService customerServiceHandle;
 
     @PostMapping
     public void saveCustomer(@RequestBody CreateCustomerRequest customer){
-        customerService.saveCustomer(customer);
+        customerServiceHandle.saveCustomer(customer);
     }
 
 }
